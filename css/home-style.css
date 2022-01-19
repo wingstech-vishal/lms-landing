@@ -1,0 +1,249 @@
+.zoom{
+    overflow: hidden;
+    padding-bottom: 10%;
+    background-image: url(../img/bg-img.jpeg);
+    background-size: 100% 100%;
+    background-position: top center;
+  }
+  @media (max-width: 1024px) {
+    .zoom{
+      overflow: hidden;
+      padding-bottom: 60%;
+    }
+  }
+
+  .carousel-indicators li {
+    background-color: #99A2BD;
+  }
+  .carousel-indicators li {
+    background-color: #99A2BD;
+  }
+  .carousel-indicators .active {
+    background-color: #F0A138;
+  }
+
+  hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid transparent;
+  }
+
+  /* Start Nav Styles */
+  .side-navbar {
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+  }
+  .side-navbar .nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .side-navbar .nav-menu li {
+    position: relative;
+    min-width: 200px;
+    text-align: left;
+  }
+  .side-navbar .nav-menu li .dot {
+    display: block;
+    color: #333;
+    padding: 5px 0;
+  }
+  .side-navbar .nav-menu li .dot::before,
+  .side-navbar .nav-menu li .dot::after {
+    display: block;
+    position: absolute;
+    content: '';
+    /* border-radius: 50%; */
+    top: 50%;
+    transition: all .3s ease;
+  }
+  
+  .side-navbar .nav-menu li .dot.active::before,
+  .side-navbar .nav-menu li:hover .dot::before {
+    background: #F0A138;
+    border-color: #F0A138;
+  }
+
+  .side-navbar .nav-menu li .dot span {
+    display: inline-block;
+    opacity: 0;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    /* background-color: #F0A138; */
+    padding: 7px 7px;
+    border-radius: 3px;
+    margin-left: 15px;
+    transform: translateX(20px);
+    transition: all .3s ease;
+  }
+
+  .side-navbar .nav-menu li .dot.active span,
+  .side-navbar .nav-menu li:hover .dot span {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .side-navbar .nav-menu li:first-child .dot:after,
+  .side-navbar .nav-menu li:nth-child(2) .dot:after {
+      background: #EE09BC;
+  }
+  
+
+.ele-zoom img.img0-zoom { margin:20vh auto 0px; display:flex; position: fixed; left:-0px; right:0px; z-index:1; transition:0.9s; width: 400px;}
+.ele-zoom img.img1-zoom { filter: blur(3px); margin:40vh auto 0px; display:flex; position: fixed; left:-300px; right:0px; z-index:1; transition:300ms all ease; width: 10px;}
+.ele-zoom img.img2-zoom { filter: blur(3px); margin:50vh auto 0px; display:flex; position: fixed; left:0px; right:-300px; z-index:1; transition:300ms all ease; width: 10px;}
+.ele-zoom img.img3-zoom { filter: blur(3px); margin:40vh auto 0px; display:flex; position: fixed; left:0px; right:-300px; z-index:1; transition:0.9s; width: 10px;}
+.ele-zoom img.img4-zoom { filter: blur(3px); margin:40vh auto 0px; display:flex; position: fixed; left:-300px; right:0px; z-index:1; transition:0.9s; width: 10px;}
+.content1 { margin:25vh auto 0px; position: fixed; left:550px; right:0px; z-index:1; transition:0.3s;}
+.content1 img { opacity: 0; transition:0.9s; }
+.content2 { width: 70%; margin:230vh auto 0px; display:flex; position: fixed; left:200px; right:0px; z-index:1; transition:0.9s; opacity: 0;}
+.content3 { margin:230vh auto 0px; display:flex; position: fixed; left:200px; right:0px; z-index:1; transition:0.9s; opacity: 0;}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+@keyframes rotating {
+from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+.rotating {
+-webkit-animation: rotating 90s linear infinite;
+-moz-animation: rotating 90s linear infinite;
+-ms-animation: rotating 90s linear infinite;
+-o-animation: rotating 90s linear infinite;
+animation: rotating 90s linear infinite;
+position: fixed;
+width: 2000px;
+height: 2000px;
+background-image: url(./img/img-4.png);
+left: -235px;
+top: -645px;
+background-size: cover;
+opacity: 0.5;
+}
+
+.featurette-heading {
+    font-size: 30px !important;
+}
+
+.lead {
+    font-size: 1rem !important;
+}
+
+.bg {
+    background: url(../img/new-bg.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    /* background-position: 0px -150px; */
+}
+.bg:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    /* opacity: 0.3; */
+    opacity: 0;
+}
+@keyframes sf-fly-by-1 {
+    from {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(0);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-2 {
+    from {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-3 {
+    from {
+        transform: translateZ(-1800px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+}
+.star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 600px;
+    -webkit-perspective: 600px;
+    z-index: -1;
+}
+.star-field .layer {
+    box-shadow: -411px -476px #444444, 777px -407px #444444, -387px -477px #444444, -91px -235px #444444, 491px -460px #444444, 892px -128px #444444, 758px -277px #444444, 596px 378px #444444, 647px 423px #444444, 183px 389px #444444,
+        524px -237px #444444, 679px -535px #444444, 158px 399px #444444, 157px 249px #444444, 81px -450px #444444, 719px -360px #444444, -499px 473px #444444, -158px -349px #444444, 870px -134px #444444, 446px 404px #444444,
+        440px 490px #444444, 414px 507px #444444, -12px 246px #444444, -384px 369px #444444, 641px -413px #444444, 822px 516px #444444, 449px 132px #444444, 727px 146px #444444, -315px -488px #444444, 952px -70px #444444,
+        -869px -29px #444444, 502px 80px #444444, 764px 342px #444444, -150px -380px #444444, 654px -426px #444444, -325px -263px #444444, 755px -447px #444444, 729px -177px #444444, -682px -391px #444444, 554px -176px #444444,
+        -85px -428px #444444, 714px 55px #444444, 359px -285px #444444, -362px -508px #444444, 468px -265px #444444, 74px -500px #444444, -514px 383px #444444, 730px -92px #444444, -112px 287px #444444, -853px 79px #444444,
+        828px 475px #444444, -681px 13px #444444, -176px 209px #444444, 758px 457px #444444, -383px -454px #444444, 813px 179px #444444, 608px 98px #444444, -860px -65px #444444, -572px 272px #444444, 459px 533px #444444,
+        624px -481px #444444, 790px 477px #444444, 731px -403px #444444, 70px -534px #444444, -23px 510px #444444, -652px -237px #444444, -690px 367px #444444, 810px 536px #444444, 774px 293px #444444, -362px 97px #444444,
+        563px 47px #444444, 313px 475px #444444, 839px -491px #444444, -217px 377px #444444, -581px 239px #444444, -857px 72px #444444, -23px 340px #444444, -837px 246px #444444, 170px -502px #444444, 822px -443px #444444, 795px 497px #444444,
+        -814px -337px #444444, 206px -339px #444444, -779px 108px #444444, 808px 2px #444444, 665px 41px #444444, -564px 64px #444444, -380px 74px #444444, -369px -60px #444444, 47px -495px #444444, -383px 368px #444444, 419px 288px #444444,
+        -598px -50px #444444, -833px 187px #444444, 378px 325px #444444, -703px 375px #444444, 392px 520px #444444, -492px -60px #444444, 759px 288px #444444, 98px -412px #444444, -911px -277px #444444;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+}
+.star-field .layer:nth-child(1) {
+    animation: sf-fly-by-1 5s linear infinite;
+}
+.star-field .layer:nth-child(2) {
+    animation: sf-fly-by-2 5s linear infinite;
+}
+.star-field .layer:nth-child(3) {
+    animation: sf-fly-by-3 5s linear infinite;
+}

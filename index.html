@@ -1,0 +1,770 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>UTSide Marketing</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/galaxy.css" />
+    <link rel="stylesheet" type="text/css" href="./css/home-style.css" />
+  </head>
+  <body>
+
+    <!-- <div id="background">
+			<div class="star" data-parallaxify-range="100"></div>
+		</div> -->
+    <main role="main">
+
+      <div class="container marketing" style="height: 2304px;">
+        <div class="bg"></div>
+        <div class="star-field">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+
+         <section id="container" class="section">
+          <div class="row featurette">
+            <div class="col-md-12">
+              <div class="ele-zoom">
+                  <a href="#"><img src="./img/new-logo.png" alt="UtSide-Logo" style="z-index:111; width: 280px; position: fixed; top: -70px; left: -60px;"></a>
+                  <img class="img0-zoom" src="./img/img-0.png">
+                  <img class="img1-zoom" src="./img/img-4.png">
+                  <img class="img2-zoom" src="./img/img-5.png">
+                  <img class="img3-zoom" src="./img/img-1.png">
+                  <img class="img4-zoom" src="./img/img-2.png">
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="content1">
+          <div class="text-1">
+            <img class="text-1-blur" src="./img/text-1-blur.png" />
+            <img class="text-1-solid" src="./img/text-1.png" />
+          </div>
+          <div class="text-2">
+            <img class="text-2-blur" src="./img/text-2-blur.png" />
+            <img class="text-2-solid" src="./img/text-2.png" />
+          </div>
+          <div class="text-3">
+            <img class="text-3-blur" src="./img/text-3-blur.png" />
+            <img class="text-3-solid" src="./img/text-3.png" />
+          </div>
+        </section>
+
+        <section class="content2">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">About UTSide</h2>
+              <p class="lead">
+                Established in 2021, UTSide is the original, online animation Institute. Our students learn directly from working industry professionals – with more instructors from major studios than any other institute – and get the one on one time they need to prepare for a successful career in the Animation Industry. UTSide students learn using our proprietary online campus, exclusive feedback tools and real-world production pipeline. UTSide has an alumni community of over 5,000 students in over 5 countries, now working in world-class studios like Pixar, DreamWorks, Industrial Light & Magic, Laika, WETA and many more.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content3">
+          <div class="row featurette" style="margin-left: 500px;">
+            <div class="col-md-8">
+              <h2 class="featurette-heading">Courses</h2>
+              <p class="lead">
+                Learn to walk before you run. If you are new to animation, this first course will help you learn the core essence of animation based on the 12 basic principles of animation developed by Disney’s Frank Thomas and Ollie Johnston. You’ll learn animation concepts and techniques to build a solid foundation as you start your animation journey.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <nav id="navbar" class="side-navbar">
+        <ul class="nav-menu">
+          <li>
+            <a data-scroll="home" href="./about-us.html" class="dot about">
+              <span>About Us</span>
+            </a>
+          </li>
+          <li>
+            <a data-scroll="about" href="#courses" class="dot courses">
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a data-scroll="services" href="#mentor" class="dot mentor">
+              <span>Mentors</span>
+            </a>
+          </li>
+          <li>
+            <a data-scroll="resources" href="#resources" class="dot">
+              <span>Resources</span>
+            </a>
+          </li>
+          <li>
+            <a data-scroll="contact" href="#contact" class="dot">
+              <span>Contact Us</span>
+            </a>
+          </li>
+        </ul>
+       
+        <div class="nav-line">
+          <div class="dotted-line"></div>
+          <div class="solid-line"></div>
+          <div class="inactive-line">
+            <img src="./img/inactive-nav.png" width="12px"/>
+            <img src="./img/inactive-nav.png" width="12px"/>
+            <img src="./img/inactive-nav.png" width="12px"/>
+            <img src="./img/inactive-nav.png" width="12px"/>
+            <img src="./img/inactive-nav.png" width="12px"/>
+          </div>
+          <div class="active-line">
+            <img src="./img/active-nav.png" width="12px"/>
+            <img src="./img/active-nav.png" width="12px"/>
+            <img src="./img/active-nav.png" width="12px"/>
+            <img src="./img/active-nav.png" width="12px"/>
+            <img src="./img/active-nav.png" width="12px"/>
+          </div>
+        </div>
+      </nav>
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        $(".zoom").css({
+          backgroundSize: (100 + scroll/5)  + "%",
+          top: -(scroll/10)  + "%",
+        });
+      });
+
+      $(function() {
+
+        var link = $('#navbar a.dot');
+
+        link.on('click', function(e) {
+          var target = $($(this).attr('href'));
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 600);
+          $(this).addClass('active');
+          e.preventDefault();
+        });
+
+        $(window).on('scroll', function(){
+          scrNav();
+        });
+
+        function scrNav() {
+          var sTop = $(window).scrollTop();
+          $('section').each(function() {
+            var id = $(this).attr('id'),
+                offset = $(this).offset().top-1,
+                height = $(this).height();
+            if(sTop >= offset && sTop < offset + height) {
+              link.removeClass('active');
+              $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
+            }
+          });
+        }
+        scrNav();
+      });
+    </script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="./js/jquery.parallaxify.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(function(){
+			$(document).ready(function() {
+				var i,
+					size,
+					color,
+					width = $(window).width(),
+					height = $(window).height();
+				
+				for (i = 1; i <= 150; i++) {
+					size = Math.ceil(3*Math.random());
+					$('#background').append('<div class="star" data-parallaxify-range="' + Math.round(100*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
+				}
+				
+				for (i = 1; i <= 30; i++) {
+					size = Math.ceil(5*Math.random()) + 1;
+					$('#background').append('<div class="star" data-parallaxify-range="' + Math.round(400*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
+				}
+				
+				for (i = 1; i <= 15; i++) {
+					size = Math.ceil(5*Math.random()) + 2;
+					color = '#666666';
+					$('#background').append('<div class="star" data-parallaxify-range="' + Math.round(600*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px; background: ' + color + '; box-shadow: 0px 0px 10px ' + color + ';"></div>');
+				}
+				
+				$.parallaxify({
+					positionProperty: 'transform',
+					responsive: true,
+					motionType: 'natural',
+					mouseMotionType: 'gaussian',
+					motionAngleX: 80,
+					motionAngleY: 80,
+					alphaFilter: 0.5,
+					adjustBasePosition: true,
+					alphaPosition: 0.025,
+				});
+
+				$('#foreground').click(function() {
+					$('#info').animate({ marginLeft: "-150px" }, 700);
+				});
+			});
+		});
+
+		</script>
+    <script>
+      $(window).scroll(function(){
+
+        var scroll = $(window).scrollTop();
+        var totalHeigth = ($( window ).height());
+        // Background Rings Trasistion
+        $(".ele-zoom img.img0-zoom").css({
+            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+        });
+        $(".ele-zoom img.img1-zoom").css({
+            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+        });
+
+        // Upcoming Blur Images Transition
+        $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/2)+'%' });
+        $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/10)+'%' });
+        if(scroll > 10 && scroll <= (totalHeigth)/3){
+          $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
+          $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
+          $(".ele-zoom img.img1-zoom").css({ 'transition' : `300ms all ease` });
+          $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
+          $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(0px)` });
+
+          if(scroll < 30){
+
+            $(".text-1-blur").css({ 'opacity' : '1',transition: '800ms all ease' });
+            $(".text-1-solid").css({ 'opacity' : '1',transition: '2400ms all ease' });
+            
+            $(".text-2-blur").css({ 'opacity' : '1',transition: '800ms all ease' });
+            $(".text-2-solid").css({ 'opacity' : '1',transition: '2400ms all ease' });
+  
+            $(".text-3-blur").css({ 'opacity' : '1',transition: '800ms all ease' });
+            $(".text-3-solid").css({ 'opacity' : '1',transition: '2400ms all ease' });
+          }
+
+
+
+
+            $(".ele-zoom img.img2-zoom").css({
+              transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.07)/100+')',
+              transition: '300ms all ease',
+            });
+            $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/2.5)+'%' });
+            $(".ele-zoom img.img2-zoom").css({ 'top': +(scroll/30)+'%' });
+      //
+      }else{
+        $(".text-1-blur").css({ 'opacity' : '0' ,transition: '300ms all ease' });
+        $(".text-1-solid").css({ 'opacity' : '0',transition: '300ms all ease' });
+        
+        $(".text-2-blur").css({ 'opacity' : '0',transition: '300ms all ease' });
+        $(".text-2-solid").css({ 'opacity' : '0',transition: '300ms all ease' });
+
+        $(".text-3-blur").css({ 'opacity' : '0' ,transition: '300ms all ease' });
+        $(".text-3-solid").css({ 'opacity' : '0' ,transition: '300ms all ease' });
+        
+        $(".ele-zoom img.img1-zoom").css({ 'opacity' : '0' });
+        $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(3px)` });  
+        $(".ele-zoom img.img1-zoom").css({ 'transition' : `300ms all ease` });
+        $(".ele-zoom img.img2-zoom").css({ 'opacity' : '0' });
+          $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(3px)` });
+          $(".ele-zoom img.img2-zoom").css({
+              transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/10)/100+')',
+              transition: '300ms all ease',
+          });
+          $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/100)+'%' });
+
+      }
+
+
+      if (scroll > (totalHeigth)/3 && scroll <= ((totalHeigth)*(2/3)) ) {
+        $(".content2").css({ 'opacity' : '1' });
+        $(".content2").css({ 'margin-top' : '17vh' });
+        $("a.dot.about").addClass('active');
+        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".content2").css({ 'opacity' : '0' });
+        $(".content2").css({ 'margin-top' : '50vh' });
+        $("a.dot.about").removeClass('active');
+      }
+
+
+      if (scroll > ((totalHeigth)*(2/3)) ) {
+
+        console.log("Contact::", totalHeigth);
+        $(".content3").css({ 'opacity' : '1' });
+        $(".content3").css({ 'margin-top' : '17vh' });
+        $("a.dot.courses").addClass('active');
+        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".content3").css({ 'opacity' : '0' });
+        $(".content3").css({ 'margin-top' : '50vh' });
+        $("a.dot.courses").removeClass('active');
+      }
+
+        // if(scroll > (totalHeigth)/4 && scroll <= (totalHeigth)/2){
+        //     $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
+        //     $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(0px)` });
+
+            
+
+        // }else{
+        //     $(".ele-zoom img.img2-zoom").css({ 'opacity' : '0' });
+        //     $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(3px)` });
+        // }
+
+      });
+
+
+      
+
+    </script>
+    <script>
+        // $(window).scroll(function() {
+          // var scroll = $(window).scrollTop();
+          // console.log($( window ).height());
+          // var totalHeigth = $( window ).height();
+
+          // // Background Rings Trasistion
+
+          // $(".ele-zoom img.img0-zoom").css({
+          //     transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+          // });
+          // $(".ele-zoom img.img1-zoom").css({
+          //     transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+          // });
+
+          // // Upcoming Blur Images Transition
+          // $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/2)+'%' });
+          // $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/10)+'%' });
+
+          // if (scroll > 1 && scroll < 130) {
+          //   $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
+          // }
+          // else {
+          //   $(".ele-zoom img.img1-zoom").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 20 && scroll < 110) {
+          //   $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
+          // }
+          // else {
+          //   $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(3px)` });
+          // }
+
+          
+
+          
+
+          // if (scroll > 240 && scroll < 340 ) {
+          //   $(".content2").css({ 'opacity' : '1' });
+          //   $(".content2").css({ 'margin-top' : '17vh' });
+          //   $("a.dot.about").addClass('active');
+          //   $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+          //   $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+          // }
+          // else {
+          //   $(".content2").css({ 'opacity' : '0' });
+          //   $(".content2").css({ 'margin-top' : '50vh' });
+          //   $("a.dot.about").removeClass('active');
+          // }
+
+          // if (scroll > 420 && scroll < 620 ) {
+          //   $(".content3").css({ 'opacity' : '1' });
+          //   $(".content3").css({ 'margin-top' : '17vh' });
+          //   $("a.dot.courses").addClass('active');
+          //   $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+          //   $(".inactive-line img:nth-child(2)").css({ 'opacity' : '0' });
+          //   $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+          //   $(".active-line img:nth-child(2)").css({ 'opacity' : '1' });
+          // }
+          // else {
+          //   $(".content3").css({ 'opacity' : '0' });
+          //   $(".content3").css({ 'margin-top' : '50vh' });
+          //   $("a.dot.courses").removeClass('active');
+          // }
+
+          // if (scroll < 30 ) {
+          //   $(".text-1-blur").css({ 'opacity' : '0' });
+          //   $(".text-2-blur").css({ 'opacity' : '0' });
+          //   $(".text-3-blur").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 50 && scroll < 300 ) {
+          //   $(".ele-zoom img.img2-zoom").css({
+          //     transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.07)/100+')',
+          //   });
+          //   $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/2.5)+'%' });
+          //   $(".ele-zoom img.img2-zoom").css({ 'top': +(scroll/30)+'%' });
+          // }
+          // else if (scroll < 300 ) {
+          //   $(".ele-zoom img.img2-zoom").css({
+          //       transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/10)/100+')',
+          //   });
+          //   $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/100)+'%' });
+          // }
+
+
+          // if (scroll > 30 && scroll < 140) {
+          //   $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
+          // }
+          // else {
+          //   $(".ele-zoom img.img2-zoom").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 50 && scroll < 140) {
+          //   $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(0px)` });
+          // }
+          // else {
+          //   $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(3px)` });
+          // }
+
+          // if (scroll > 120 && scroll < 370 ) {
+          //   $(".ele-zoom img.img3-zoom").css({ 'opacity' : '1' });
+          // }
+          // else {
+          //   $(".ele-zoom img.img3-zoom").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 160 && scroll < 360) {
+          //   $(".ele-zoom img.img3-zoom").css({ 'filter' : `blur(0px)` });
+          // }
+          // else {
+          //   $(".ele-zoom img.img3-zoom").css({ 'filter' : `blur(3px)` });
+          // }
+          // $(".content1").mouseenter(function() {
+          //   $(".ele-zoom img.img1-zoom").css({ 'margin-top' : '38vh' });
+          //   $(".ele-zoom img.img2-zoom").css({ 'margin-top' : '67vh' });
+          // });
+          // $(".content1").mouseleave(function() {
+          //     $(".ele-zoom img.img1-zoom").css({ 'margin-top' : '40vh' });
+          //     $(".ele-zoom img.img2-zoom").css({ 'margin-top' : '70vh' });
+          // });
+
+
+          // Logo Transition
+
+          // if(scroll > 30){
+          //   $(".text-1-blur").css({ 'opacity' : '0' });
+          //   $(".text-2-blur").css({ 'opacity' : '0' });
+          //   $(".text-3-blur").css({ 'opacity' : '0' });
+          //   $(".text-1-solid").css({ 'opacity' : '0' });
+          //   $(".text-2-solid").css({ 'opacity' : '0' });
+          //   $(".text-3-solid").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll < 30 ) {
+          //   $(".text-1-blur").css({ 'opacity' : '0' });
+          //   $(".text-2-blur").css({ 'opacity' : '0' });
+          //   $(".text-3-blur").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 30 && scroll < 35 ) {
+          //   $(".text-1-blur").css({ 'opacity' : '1' });
+          //   $(".text-2-blur").css({ 'opacity' : '0' });
+          //   $(".text-1-solid").css({ 'opacity' : '0' });
+          // }
+          
+          // if (scroll > 35 && scroll < 45 ) {
+          //   $(".text-2-blur").css({ 'opacity' : '1' });
+          //   $(".text-1-solid").css({ 'opacity' : '1' });
+          //   $(".text-1-blur").css({ 'opacity' : '0' });
+          //   $(".text-3-blur").css({ 'opacity' : '0' });
+          //   $(".text-2-solid").css({ 'opacity' : '0' });
+          // }
+          
+          // if (scroll > 45 && scroll < 55 ) {
+          //   $(".text-3-blur").css({ 'opacity' : '1' });
+          //   $(".text-2-solid").css({ 'opacity' : '1' });
+          //   $(".text-2-blur").css({ 'opacity' : '0' });
+          //   $(".text-3-solid").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 55 && scroll < 65 ) {
+          //   $(".text-3-solid").css({ 'opacity' : '1' });
+          //   $(".text-3-blur").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 85 && scroll < 95 ) {
+          //   $(".text-3-solid").css({ 'opacity' : '0' });
+          //   $(".text-3-blur").css({ 'opacity' : '1' });
+          // }
+
+          // if (scroll > 105 && scroll < 115 ) {
+          //   $(".text-2-solid").css({ 'opacity' : '0' });
+          //   $(".text-2-blur").css({ 'opacity' : '1' });
+          //   $(".text-3-blur").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 115 && scroll < 125 ) {
+          //   $(".text-1-solid").css({ 'opacity' : '0' });
+          //   $(".text-1-blur").css({ 'opacity' : '1' });
+          //   $(".text-2-blur").css({ 'opacity' : '0' });
+          // }
+
+          // if (scroll > 135 ) {
+          //   $(".text-1-blur").css({ 'opacity' : '0' });
+          // }
+
+        // });
+
+    </script>
+<!-- <script>
+  $(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+
+      $(".ele-zoom img.img0-zoom").css({
+          transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+      });
+
+      $(".ele-zoom img.img1-zoom").css({
+          transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+      });
+      $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/2)+'%' });
+      $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/10)+'%' });
+
+      if (scroll > 1 && scroll < 130) {
+        $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".ele-zoom img.img1-zoom").css({ 'opacity' : '0' });
+      }
+
+      if (scroll > 20 && scroll < 110) {
+        $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
+      }
+      else {
+        $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(3px)` });
+      }
+      
+      if (scroll > 30 && scroll < 140) {
+        $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".ele-zoom img.img2-zoom").css({ 'opacity' : '0' });
+      }
+      
+      if (scroll > 50 && scroll < 140) {
+        $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(0px)` });
+      }
+      else {
+        $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(3px)` });
+      }
+
+      if (scroll > 120 && scroll < 370 ) {
+        $(".ele-zoom img.img3-zoom").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".ele-zoom img.img3-zoom").css({ 'opacity' : '0' });
+      }
+
+      if (scroll > 160 && scroll < 360) {
+        $(".ele-zoom img.img3-zoom").css({ 'filter' : `blur(0px)` });
+      }
+      else {
+        $(".ele-zoom img.img3-zoom").css({ 'filter' : `blur(3px)` });
+      }
+
+      if (scroll > 340 && scroll < 610) {
+        $(".ele-zoom img.img4-zoom").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".ele-zoom img.img4-zoom").css({ 'opacity' : '0' });
+      }
+
+      if (scroll > 380 && scroll < 600) {
+        $(".ele-zoom img.img4-zoom").css({ 'filter' : `blur(0px)` });
+      }
+      else {
+        $(".ele-zoom img.img4-zoom").css({ 'filter' : `blur(3px)` });
+      }
+
+      if (scroll < 30 ) {
+        $(".text-1-blur").css({ 'opacity' : '0' });
+        $(".text-2-blur").css({ 'opacity' : '0' });
+        $(".text-3-blur").css({ 'opacity' : '0' });
+      }
+
+      if (scroll > 30 && scroll < 35 ) {
+        $(".text-1-blur").css({ 'opacity' : '1' });
+        $(".text-2-blur").css({ 'opacity' : '0' });
+        $(".text-1-solid").css({ 'opacity' : '0' });
+      }
+      
+      if (scroll > 35 && scroll < 45 ) {
+        $(".text-2-blur").css({ 'opacity' : '1' });
+        $(".text-1-solid").css({ 'opacity' : '1' });
+        $(".text-1-blur").css({ 'opacity' : '0' });
+        $(".text-3-blur").css({ 'opacity' : '0' });
+        $(".text-2-solid").css({ 'opacity' : '0' });
+      }
+      
+      if (scroll > 45 && scroll < 55 ) {
+        $(".text-3-blur").css({ 'opacity' : '1' });
+        $(".text-2-solid").css({ 'opacity' : '1' });
+        $(".text-2-blur").css({ 'opacity' : '0' });
+        $(".text-3-solid").css({ 'opacity' : '0' });
+      }
+
+      if (scroll > 55 && scroll < 65 ) {
+        $(".text-3-solid").css({ 'opacity' : '1' });
+        $(".text-3-blur").css({ 'opacity' : '0' });
+      }
+
+      else if (scroll > 85 && scroll < 95 ) {
+        $(".text-3-solid").css({ 'opacity' : '0' });
+        $(".text-3-blur").css({ 'opacity' : '1' });
+      }
+
+      else if (scroll > 105 && scroll < 115 ) {
+        $(".text-2-solid").css({ 'opacity' : '0' });
+        $(".text-2-blur").css({ 'opacity' : '1' });
+        $(".text-3-blur").css({ 'opacity' : '0' });
+      }
+
+      else if (scroll > 115 && scroll < 125 ) {
+        $(".text-1-solid").css({ 'opacity' : '0' });
+        $(".text-1-blur").css({ 'opacity' : '1' });
+        $(".text-2-blur").css({ 'opacity' : '0' });
+      }
+
+      else if (scroll > 135 ) {
+        $(".text-1-blur").css({ 'opacity' : '0' });
+      }
+      
+      if (scroll > 50 && scroll < 300 ) {
+        $(".ele-zoom img.img2-zoom").css({
+          transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.07)/100+')',
+        });
+        $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/2.5)+'%' });
+        $(".ele-zoom img.img2-zoom").css({ 'top': +(scroll/30)+'%' });
+      }
+      else if (scroll < 300 ) {
+        $(".ele-zoom img.img2-zoom").css({
+            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/10)/100+')',
+        });
+        $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/100)+'%' });
+      }
+
+      if (scroll > 140 && scroll < 1460 ) {
+        $(".ele-zoom img.img3-zoom").css({
+            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.05)/100+')',
+        });
+        $(".ele-zoom img.img3-zoom").css({ 'left': +(scroll/6)+'%' });
+      }
+      else if (scroll < 140 ) {
+        $(".ele-zoom img.img3-zoom").css({
+            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/10)/100+')',
+        });
+        $(".ele-zoom img.img3-zoom").css({ 'left': +(scroll/100)+'%' });
+      }
+
+      if (scroll > 350) {
+        $(".ele-zoom img.img3-zoom").css({ 'left': +(scroll/3)+'%' });
+      }
+
+      if (scroll > 400 && scroll < 2000 ) {
+        $(".ele-zoom img.img4-zoom").css({
+            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.07)/100+')',
+        });
+        $(".ele-zoom img.img4-zoom").css({ 'right': +(scroll/30)+'%' });
+        $(".ele-zoom img.img4-zoom").css({ 'top': +(scroll/60)+'%' });
+      }
+      else if (scroll < 380 ) {
+        $(".ele-zoom img.img4-zoom").css({
+            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/10)/100+')',
+        });
+        $(".ele-zoom img.img4-zoom").css({ 'right': +(scroll/100)+'%' });
+        $(".ele-zoom img.img4-zoom").css({ 'top': +(scroll/150)+'%' });
+      }
+
+      if (scroll > 240 && scroll < 340 ) {
+        $(".content2").css({ 'opacity' : '1' });
+        $(".content2").css({ 'margin-top' : '17vh' });
+        $("a.dot.about").addClass('active');
+        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".content2").css({ 'opacity' : '0' });
+        $(".content2").css({ 'margin-top' : '50vh' });
+        $("a.dot.about").removeClass('active');
+      }
+
+      if (scroll > 420 && scroll < 620 ) {
+        $(".content3").css({ 'opacity' : '1' });
+        $(".content3").css({ 'margin-top' : '17vh' });
+        $("a.dot.courses").addClass('active');
+        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+        $(".inactive-line img:nth-child(2)").css({ 'opacity' : '0' });
+        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        $(".active-line img:nth-child(2)").css({ 'opacity' : '1' });
+      }
+      else {
+        $(".content3").css({ 'opacity' : '0' });
+        $(".content3").css({ 'margin-top' : '50vh' });
+        $("a.dot.courses").removeClass('active');
+      }
+
+      if (scroll > 420 ) {
+        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+        $(".inactive-line img:nth-child(2)").css({ 'opacity' : '0' });
+        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        $(".active-line img:nth-child(2)").css({ 'opacity' : '1' });
+        $(".solid-line").css({ 'height' : '50px' });
+      }
+
+      if (scroll < 420 ) {
+        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+        $(".inactive-line img:nth-child(2)").css({ 'opacity' : '1' });
+        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        $(".active-line img:nth-child(2)").css({ 'opacity' : '0' });
+        $(".solid-line").css({ 'height' : '0px' });
+      }
+
+      if (scroll < 240 ) {
+        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '1' });
+        $(".active-line img:nth-child(1)").css({ 'opacity' : '0' });
+      }
+
+      $(".content1").mouseenter(function() {
+          $(".ele-zoom img.img1-zoom").css({ 'margin-top' : '38vh' });
+          $(".ele-zoom img.img2-zoom").css({ 'margin-top' : '67vh' });
+      });
+      $(".content1").mouseleave(function() {
+          $(".ele-zoom img.img1-zoom").css({ 'margin-top' : '40vh' });
+          $(".ele-zoom img.img2-zoom").css({ 'margin-top' : '70vh' });
+      });
+
+      $(".content2").mouseenter(function() {
+          $(".ele-zoom img.img3-zoom").css({ 'margin-top' : '38vh' });
+      });
+      $(".content3").mouseleave(function() {
+          $(".ele-zoom img.img4-zoom").css({ 'margin-top' : '40vh' });
+      });
+
+  });
+
+</script> -->
+
+  </body>
+</html>
