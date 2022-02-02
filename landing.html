@@ -22,7 +22,7 @@
 		</div> -->
     <main role="main">
 
-      <div class="container marketing" style="height: 2304px;">
+      <div class="container marketing" style="height: 900vh;">
         <div class="bg"></div>
         <div class="star-field">
         <div class="layer"></div>
@@ -229,24 +229,28 @@
         var scroll = $(window).scrollTop();
         var totalHeigth = ($( window ).height());
         // Background Rings Trasistion
-        $(".ele-zoom img.img0-zoom").css({
-            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
-        });
-        $(".ele-zoom img.img1-zoom").css({
-            transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
-        });
+        console.log("Scroll : ",scroll);
+        console.log("totalHeigth : ",totalHeigth);
 
         // Upcoming Blur Images Transition
-        $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/2)+'%' });
+        $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/5)+'%' });
         $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/10)+'%' });
-        if(scroll > 10 && scroll <= (totalHeigth)/3){
+        if(scroll > 100 && scroll <= 300){
           $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
           $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
-          $(".ele-zoom img.img1-zoom").css({ 'transition' : `300ms all ease` });
+          $(".ele-zoom img.img1-zoom").css({ 'transition' : `500ms all ease` });
           $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
           $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(0px)` });
 
-          if(scroll < 30){
+
+        //   $(".ele-zoom img.img0-zoom").css({
+        //     transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+        // });
+            $(".ele-zoom img.img1-zoom").css({
+                transform: 'translate3d(-0%, -'+(scroll/10)+'%, 0) scale('+(100 + scroll/0.05)/100+')',
+            });
+
+          if(scroll < 300){
 
             $(".text-1-blur").css({ 'opacity' : '1',transition: '800ms all ease' });
             $(".text-1-solid").css({ 'opacity' : '1',transition: '2400ms all ease' });
@@ -262,8 +266,8 @@
 
 
             $(".ele-zoom img.img2-zoom").css({
-              transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.07)/100+')',
-              transition: '300ms all ease',
+              transform: 'translate3d(-0%, -'+(scroll/10)+'%, 0) scale('+(100 + scroll/0.10)/100+')',
+              transition: '500ms all ease',
             });
             $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/2.5)+'%' });
             $(".ele-zoom img.img2-zoom").css({ 'top': +(scroll/30)+'%' });
@@ -292,34 +296,34 @@
       }
 
 
-      if (scroll > (totalHeigth)/3 && scroll <= ((totalHeigth)*(2/3)) ) {
-        $(".content2").css({ 'opacity' : '1' });
-        $(".content2").css({ 'margin-top' : '17vh' });
-        $("a.dot.about").addClass('active');
-        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
-        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
-      }
-      else {
-        $(".content2").css({ 'opacity' : '0' });
-        $(".content2").css({ 'margin-top' : '50vh' });
-        $("a.dot.about").removeClass('active');
-      }
+      // if (scroll > (totalHeigth)/3 && scroll <= ((totalHeigth)*(2/3)) ) {
+      //   $(".content2").css({ 'opacity' : '1' });
+      //   $(".content2").css({ 'margin-top' : '17vh' });
+      //   $("a.dot.about").addClass('active');
+      //   $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+      //   $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+      // }
+      // else {
+      //   $(".content2").css({ 'opacity' : '0' });
+      //   $(".content2").css({ 'margin-top' : '50vh' });
+      //   $("a.dot.about").removeClass('active');
+      // }
 
 
-      if (scroll > ((totalHeigth)*(2/3)) ) {
+      // if (scroll > ((totalHeigth)*(2/3)) ) {
 
-        console.log("Contact::", totalHeigth);
-        $(".content3").css({ 'opacity' : '1' });
-        $(".content3").css({ 'margin-top' : '17vh' });
-        $("a.dot.courses").addClass('active');
-        $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
-        $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
-      }
-      else {
-        $(".content3").css({ 'opacity' : '0' });
-        $(".content3").css({ 'margin-top' : '50vh' });
-        $("a.dot.courses").removeClass('active');
-      }
+      //   console.log("Contact::", totalHeigth);
+      //   $(".content3").css({ 'opacity' : '1' });
+      //   $(".content3").css({ 'margin-top' : '17vh' });
+      //   $("a.dot.courses").addClass('active');
+      //   $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+      //   $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+      // }
+      // else {
+      //   $(".content3").css({ 'opacity' : '0' });
+      //   $(".content3").css({ 'margin-top' : '50vh' });
+      //   $("a.dot.courses").removeClass('active');
+      // }
 
         // if(scroll > (totalHeigth)/4 && scroll <= (totalHeigth)/2){
         //     $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
