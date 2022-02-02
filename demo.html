@@ -36,6 +36,8 @@
                   <img class="img0-zoom" src="./img/img-0.webp">
                   <img class="img1-zoom" src="./img/img-4.webp">
                   <img class="img2-zoom" src="./img/img-5.png">
+                  <img class="img3-zoom" src="./img/img-1.png">
+                  <img class="img4-zoom" src="./img/img-2.png">
               </div>
 
             </div>
@@ -68,7 +70,7 @@
         </section>
 
         <section class="content3">
-          <div class="row featurette" style="margin-left: 500px;">
+          <div class="row featurette">
             <div class="col-md-8">
               <h2 class="featurette-heading">Courses</h2>
               <p class="lead">
@@ -183,18 +185,10 @@
     <script>
       $( window ).on( "scroll", function(e) {
         e.preventDefault();
-          var scroll = $(window).scrollTop();
+        var scroll = $(window).scrollTop();
 
-        //      $(".ele-zoom img.img0-zoom").css({
-        //       transform: 'translate3d(0%, 0%, 0) scale('+(scroll/100)+')',
-        //       transition : `800ms all ease`,
-        // });
-        // Upcoming Blur Images Transition
-        // $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/10)+'%' });
-        // $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/20)+'%' });
+        // Section one animation 
         if(scroll > 100 && scroll <= 1000){
-          // $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
-          // $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
           $(".ele-zoom img.img1-zoom").css({
                 transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*5)/100+')',
                 transition : `800ms all ease`,
@@ -204,35 +198,99 @@
                 opacity: '1'
           });
           $(".ele-zoom img.img2-zoom").css({
-                transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*5)/100+')',
+                transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*2)/100+')',
                 transition : `800ms all ease`,
                 left: (scroll/10)+'%',
                 top: (scroll/20)+'%',
                 filter: 'blur(0px)',
                 opacity: '1'
           });
+
+          if(scroll > 200 && scroll <= 1000){
+            $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur").css({
+              opacity : '1',
+              transition : `800ms all ease`,
+            })
+          }if(scroll > 600 && scroll <= 900){
+
+            $(".text-1-solid, .text-2-solid, .text-3-solid, .text-4-solid").css({
+              opacity : '1',
+              transition : `1000ms all ease`,
+            })
+
+          }else{
+            $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur, .text-1-solid, .text-2-solid, .text-3-solid, .text-4-solid").css({
+              opacity : '0',
+              transition : `800ms all ease`,
+            })
+          }
+
+
+
         }else{
-        
-        $(".ele-zoom img.img1-zoom").css({ 'opacity' : '0' });
-        $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(3px)` });  
-        $(".ele-zoom img.img1-zoom").css({ 'transition' : `800ms all ease` });
-          console.log(scroll);
+          $(".ele-zoom img.img1-zoom").css({
+            opacity: '0',
+            filter: 'blur(3px)',
+            transition : '800ms all ease'
+          });
+          $(".ele-zoom img.img2-zoom").css({
+            opacity: '0',
+            filter: 'blur(3px)',
+            transition : '800ms all ease'
+          });
         }
 
+        // Section two animation 
 
-        
-          if (scroll > 1100 && scroll <= 3000 ) {
-            $(".content2").css({ 'opacity' : '1' });
-            $(".content2").css({ 'margin-top' : '17vh' });
-            $("a.dot.about").addClass('active');
-            $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
-            $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
-          }
-          else {
-            $(".content2").css({ 'opacity' : '0' });
-            $(".content2").css({ 'margin-top' : '50vh' });
-            $("a.dot.about").removeClass('active');
-          }
+        if (scroll > 1100 && scroll <= 3000 ) {
+          $(".content2").css({
+            opacity: '1'
+          });
+          $(".ele-zoom img.img3-zoom").css({
+              transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*2.5)/100+')',
+              transition : `800ms all ease`,
+              left: (scroll/100)+'%',
+              top: (scroll/200)+'%',
+              filter: 'blur(0px)',
+              opacity: '1'
+        });
+          $("a.dot.about").addClass('active');
+          $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+          $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        }else {
+          $(".ele-zoom img.img3-zoom").css({
+            opacity: '0',
+            filter: 'blur(3px)',
+            transition : '800ms all ease'
+          });
+          $(".content2").css({ 'opacity' : '0' });
+          $("a.dot.about").removeClass('active');
+        }
+
+        // Section three animation 
+
+        if (scroll > 3100 && scroll <= 6000 ) {
+          $(".content3").css({opacity: '1'});
+          $(".ele-zoom img.img4-zoom").css({
+              transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*1.5)/100+')',
+              transition : `800ms all ease`,
+              left: ('-'+scroll*0.5/100)+'%',
+              top: (scroll/200)+'%',
+              filter: 'blur(0px)',
+              opacity: '1'
+        });
+          $("a.dot.courses").addClass('active');
+          $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+          $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        }else {
+          $(".ele-zoom img.img4-zoom").css({
+            opacity: '0',
+            filter: 'blur(3px)',
+            transition : '800ms all ease'
+          });
+          $(".content3").css({ 'opacity' : '0' });
+          $("a.dot.courses").removeClass('active');
+        }
       });
 
       $(window).scroll(function(){
