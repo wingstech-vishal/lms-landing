@@ -33,12 +33,9 @@
           <div class="row featurette">
             <div class="col-md-12">
               <div class="ele-zoom">
-                  <a href="#"><img src="./img/new-logo.png" alt="UtSide-Logo" style="z-index:111; width: 280px; position: fixed; top: -70px; left: -60px;"></a>
-                  <img class="img0-zoom" src="./img/img-0.png">
-                  <img class="img1-zoom" src="./img/img-4.png">
+                  <img class="img0-zoom" src="./img/img-0.webp">
+                  <img class="img1-zoom" src="./img/img-4.webp">
                   <img class="img2-zoom" src="./img/img-5.png">
-                  <img class="img3-zoom" src="./img/img-1.png">
-                  <img class="img4-zoom" src="./img/img-2.png">
               </div>
 
             </div>
@@ -136,47 +133,7 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script>
-      $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        $(".zoom").css({
-          backgroundSize: (100 + scroll/5)  + "%",
-          top: -(scroll/10)  + "%",
-        });
-      });
-
-      $(function() {
-
-        var link = $('#navbar a.dot');
-
-        link.on('click', function(e) {
-          var target = $($(this).attr('href'));
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 600);
-          $(this).addClass('active');
-          e.preventDefault();
-        });
-
-        $(window).on('scroll', function(){
-          scrNav();
-        });
-
-        function scrNav() {
-          var sTop = $(window).scrollTop();
-          $('section').each(function() {
-            var id = $(this).attr('id'),
-                offset = $(this).offset().top-1,
-                height = $(this).height();
-            if(sTop >= offset && sTop < offset + height) {
-              link.removeClass('active');
-              $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
-            }
-          });
-        }
-        scrNav();
-      });
-    </script>
+    
 <script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="./js/jquery.parallaxify.min.js" type="text/javascript"></script>
 		<script type="text/javascript">
@@ -224,91 +181,98 @@
 
 		</script>
     <script>
-      $(window).scroll(function(){
+      $( window ).on( "scroll", function(e) {
+        e.preventDefault();
+          var scroll = $(window).scrollTop();
 
-        var scroll = $(window).scrollTop();
-        var totalHeigth = ($( window ).height());
-        // Background Rings Trasistion
-        console.log("Scroll : ",scroll);
-        console.log("totalHeigth : ",totalHeigth);
-
-        // Upcoming Blur Images Transition
-        $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/5)+'%' });
-        $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/10)+'%' });
-        if(scroll > 200 && scroll <= 2000){
-          $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
-          $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
-          $(".ele-zoom img.img1-zoom").css({ 'transition' : `800ms all ease` });
-          $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
-          $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(0px)` });
-
-
-        //   $(".ele-zoom img.img0-zoom").css({
-        //     transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/0.03)/100+')',
+        //      $(".ele-zoom img.img0-zoom").css({
+        //       transform: 'translate3d(0%, 0%, 0) scale('+(scroll/100)+')',
+        //       transition : `800ms all ease`,
         // });
-            $(".ele-zoom img.img1-zoom").css({
-                transform: 'translate3d(-0%, -'+(scroll/5)+'%, 0) scale('+(100 + scroll/0.08)/100+')',
-            });
-
-          if(scroll < 300){
-
-            $(".text-1-blur").css({ 'opacity' : '1',transition: '800ms all ease' });
-            $(".text-1-solid").css({ 'opacity' : '1',transition: '2400ms all ease' });
-            
-            $(".text-2-blur").css({ 'opacity' : '1',transition: '800ms all ease' });
-            $(".text-2-solid").css({ 'opacity' : '1',transition: '2400ms all ease' });
-  
-            $(".text-3-blur").css({ 'opacity' : '1',transition: '800ms all ease' });
-            $(".text-3-solid").css({ 'opacity' : '1',transition: '2400ms all ease' });
-          }
-
-
-
-
-            $(".ele-zoom img.img2-zoom").css({
-              transform: 'translate3d(-0%, -'+(scroll/10)+'%, 0) scale('+(100 + scroll/0.10)/100+')',
-              transition: '500ms all ease',
-            });
-            $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/2.5)+'%' });
-            $(".ele-zoom img.img2-zoom").css({ 'top': +(scroll/30)+'%' });
-      //
-      }else{
-        $(".text-1-blur").css({ 'opacity' : '0' ,transition: '300ms all ease' });
-        $(".text-1-solid").css({ 'opacity' : '0',transition: '300ms all ease' });
-        
-        $(".text-2-blur").css({ 'opacity' : '0',transition: '300ms all ease' });
-        $(".text-2-solid").css({ 'opacity' : '0',transition: '300ms all ease' });
-
-        $(".text-3-blur").css({ 'opacity' : '0' ,transition: '300ms all ease' });
-        $(".text-3-solid").css({ 'opacity' : '0' ,transition: '300ms all ease' });
+        // Upcoming Blur Images Transition
+        // $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/10)+'%' });
+        // $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/20)+'%' });
+        if(scroll > 100 && scroll <= 1000){
+          // $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
+          // $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
+          $(".ele-zoom img.img1-zoom").css({
+                transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*5)/100+')',
+                transition : `800ms all ease`,
+                right: (scroll/10)+'%',
+                top: (scroll/20)+'%',
+                filter: 'blur(0px)',
+                opacity: '1'
+          });
+          $(".ele-zoom img.img2-zoom").css({
+                transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*5)/100+')',
+                transition : `800ms all ease`,
+                left: (scroll/10)+'%',
+                top: (scroll/20)+'%',
+                filter: 'blur(0px)',
+                opacity: '1'
+          });
+        }else{
         
         $(".ele-zoom img.img1-zoom").css({ 'opacity' : '0' });
         $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(3px)` });  
-        $(".ele-zoom img.img1-zoom").css({ 'transition' : `300ms all ease` });
-        $(".ele-zoom img.img2-zoom").css({ 'opacity' : '0' });
-          $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(3px)` });
-          $(".ele-zoom img.img2-zoom").css({
-              transform: 'translate3d(-0%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/10)/100+')',
-              transition: '300ms all ease',
-          });
-          $(".ele-zoom img.img2-zoom").css({ 'left': +(scroll/100)+'%' });
-
-      }
+        $(".ele-zoom img.img1-zoom").css({ 'transition' : `800ms all ease` });
+          console.log(scroll);
+        }
 
 
-      // if (scroll > (totalHeigth)/3 && scroll <= ((totalHeigth)*(2/3)) ) {
-      //   $(".content2").css({ 'opacity' : '1' });
-      //   $(".content2").css({ 'margin-top' : '17vh' });
-      //   $("a.dot.about").addClass('active');
-      //   $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
-      //   $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        
+          if (scroll > 1100 && scroll <= 3000 ) {
+            $(".content2").css({ 'opacity' : '1' });
+            $(".content2").css({ 'margin-top' : '17vh' });
+            $("a.dot.about").addClass('active');
+            $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+            $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+          }
+          else {
+            $(".content2").css({ 'opacity' : '0' });
+            $(".content2").css({ 'margin-top' : '50vh' });
+            $("a.dot.about").removeClass('active');
+          }
+      });
+
+      $(window).scroll(function(){
+
+      //   var totalHeigth = ($( window ).height());
+      //   // Background Rings Trasistion
+      //   console.log("Scroll : ",scroll);
+      //   console.log("totalHeigth : ",totalHeigth);
+
+       
+      //   $(".ele-zoom img.img0-zoom").css({
+      //         transform: 'translate3d(0%, 0%, 0) scale('+(scroll/100)+')',
+      //         transition : `800ms all ease`,
+      //   });
+      //   // Upcoming Blur Images Transition
+      //   $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/10)+'%' });
+      //   $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/20)+'%' });
+      //   if(scroll > 100 && scroll <= 1000){
+      //     $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
+      //     $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
+      //     $(".ele-zoom img.img1-zoom").css({
+      //           transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*5)/100+')',
+      //           transition : `800ms all ease`,
+      //     });
+
+          
+      
+      // }else{
+        
+      //   $(".ele-zoom img.img1-zoom").css({ 'opacity' : '0' });
+      //   $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(3px)` });  
+      //   $(".ele-zoom img.img1-zoom").css({ 'transition' : `800ms all ease` });
+        
+
       // }
-      // else {
-      //   $(".content2").css({ 'opacity' : '0' });
-      //   $(".content2").css({ 'margin-top' : '50vh' });
-      //   $("a.dot.about").removeClass('active');
-      // }
 
+
+
+
+      
 
       // if (scroll > ((totalHeigth)*(2/3)) ) {
 
