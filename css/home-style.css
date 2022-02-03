@@ -1,3 +1,8 @@
+html,
+* {
+  scroll-behavior: smooth;
+}
+
 .zoom {
   overflow: hidden;
   padding-bottom: 10%;
@@ -94,14 +99,16 @@ hr {
 }
 
 .ele-zoom img.img0-zoom {
-  margin: 20vh auto 0px;
-  display: flex;
-  position: fixed;
-  left: -0px;
-  right: 0px;
-  z-index: 1;
-  transition: 0.9s;
+  /* margin: 20vh auto 0px; */
+  /* display: flex; */
+  /* position: fixed; */
+  /* left: -0px; */
+  /* right: 0px; */
+  /* z-index: 1; */
+  /* transition: 0.9s; */
   width: 400px;
+  margin: 21vh auto;
+  display: flex;
 }
 .ele-zoom img.img1-zoom {
   filter: blur(3px);
@@ -113,6 +120,8 @@ hr {
   z-index: 1;
   transition: 300ms all ease;
   width: 10px;
+  height: 15px;
+  object-fit: contain;
 }
 .ele-zoom img.img2-zoom {
   filter: blur(3px);
@@ -124,6 +133,9 @@ hr {
   z-index: 1;
   transition: 300ms all ease;
   width: 10px;
+  width: 10px;
+  object-fit: contain;
+  height: 20px;
 }
 .ele-zoom img.img3-zoom {
   filter: blur(3px);
@@ -135,6 +147,8 @@ hr {
   z-index: 1;
   transition: 0.9s;
   width: 10px;
+  object-fit: contain;
+  height: 8px;
 }
 .ele-zoom img.img4-zoom {
   filter: blur(3px);
@@ -146,6 +160,8 @@ hr {
   z-index: 1;
   transition: 0.9s;
   width: 10px;
+  object-fit: contain;
+  height: 7px;
 }
 .content1 {
   margin: 25vh auto 0px;
