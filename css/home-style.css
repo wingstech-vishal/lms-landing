@@ -100,12 +100,12 @@ hr {
 
 .ele-zoom img.img0-zoom {
   /* margin: 20vh auto 0px; */
-  /* display: flex; */
+  display: flex;
   /* position: fixed; */
-  /* left: -0px; */
-  /* right: 0px; */
+  left: -0px;
+  right: 0px;
   /* z-index: 1; */
-  /* transition: 0.9s; */
+  transition: 0.9s;
   width: 400px;
   margin: 21vh auto;
   display: flex;

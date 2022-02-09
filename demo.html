@@ -22,6 +22,8 @@
 		</div> -->
     <main role="main">
 
+     
+
       <div class="container marketing" style="height: 900vh;">
         <div class="bg"></div>
         <div class="star-field">
@@ -33,11 +35,11 @@
           <div class="row featurette">
             <div class="col-md-12">
               <div class="ele-zoom">
-                  <img class="img0-zoom" src="./img/img-0.webp">
-                  <img class="img1-zoom" src="./img/img-44.png">
-                  <img class="img2-zoom" src="./img/img-55.png">
-                  <img class="img3-zoom" src="./img/img-11.png">
-                  <img class="img4-zoom" src="./img/img-22.png">
+                <img class="img1-zoom" src="./img/img-44.png">
+                <img class="img2-zoom" src="./img/img-55.png">
+                <img class="img3-zoom" src="./img/img-11.png">
+                <img class="img4-zoom" src="./img/img-22.png">
+                <img class="img0-zoom" src="./img/img-0.webp">
               </div>
 
             </div>
@@ -187,8 +189,8 @@
         e.preventDefault();
         var scroll = $(window).scrollTop();
           $(".ele-zoom img.img0-zoom").css({
-              // transform: 'scale('+(scroll*0.01)+')',
-              // transition : `800ms all ease`,
+              transform: 'scale('+(scroll*0.01)+')',
+              transition : `800ms all ease`,
         });
         // Section one animation 
         if(scroll > 100 && scroll <= 1000){
