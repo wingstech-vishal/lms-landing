@@ -96,7 +96,7 @@
         <section class="content5">
           <div class="row featurette">
             <div class="col-md-8">
-              <h2 class="featurette-heading">Resources</h2>
+              <h2 class="featurette-heading">Gallery</h2>
               <p class="lead">
                 Learn to walk before you run. If you are new to animation, this first course will help you learn the core essence of animation based on the 12 basic principles of animation developed by Disney’s Frank Thomas and Ollie Johnston. You’ll learn animation concepts and techniques to build a solid foundation as you start your animation journey.</p>
             </div>
@@ -123,22 +123,32 @@
             </a>
           </li>
           <li>
-            <a data-scroll="about" href="#courses" class="dot courses">
+            <a data-scroll="home" href="./admission.html" class="dot admission">
+              <span>Admissions</span>
+            </a>
+          </li>
+          <li>
+            <a data-scroll="about" href="./courses.html" class="dot courses">
               <span>Courses</span>
             </a>
           </li>
           <li>
-            <a data-scroll="services" href="#mentor" class="dot mentor">
-              <span>Mentors</span>
+            <a data-scroll="services" href="./mentors.html" class="dot mentor">
+              <span>Our Mentors</span>
             </a>
           </li>
           <li>
-            <a data-scroll="resources" href="#resources" class="dot resources">
-              <span>Resources</span>
+            <a data-scroll="resources" href="./gallery.html" class="dot gallery">
+              <span>Gallery</span>
             </a>
           </li>
           <li>
-            <a data-scroll="contact" href="#contact" class="dot">
+            <a data-scroll="contact" href="./partners.html" class="dot partners">
+              <span>Partners</span>
+            </a>
+          </li>
+          <li>
+            <a data-scroll="contact" href="./contact.html" class="dot contact">
               <span>Contact Us</span>
             </a>
           </li>
@@ -153,8 +163,12 @@
             <img src="./img/inactive-nav.png" width="12px"/>
             <img src="./img/inactive-nav.png" width="12px"/>
             <img src="./img/inactive-nav.png" width="12px"/>
+            <img src="./img/inactive-nav.png" width="12px"/>
+            <img src="./img/inactive-nav.png" width="12px"/>
           </div>
           <div class="active-line">
+            <img src="./img/active-nav.png" width="12px"/>
+            <img src="./img/active-nav.png" width="12px"/>
             <img src="./img/active-nav.png" width="12px"/>
             <img src="./img/active-nav.png" width="12px"/>
             <img src="./img/active-nav.png" width="12px"/>
@@ -327,7 +341,7 @@
                 filter: 'blur(0px)',
                 opacity: '1'
             });
-            $("a.dot.resources").addClass('active');
+            $("a.dot.gallery").addClass('active');
             $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
             $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
         }else {
@@ -337,7 +351,7 @@
               transition : '800ms all ease'
             });
             $(".content5").css({ 'opacity' : '0' });
-            $("a.dot.resources").removeClass('active');
+            $("a.dot.gallery").removeClass('active');
         }
         
 

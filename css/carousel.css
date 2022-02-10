@@ -7,7 +7,6 @@
   z-index: 10;
 }
 
-
 .carousel-item {
   height: 40rem;
   /* background-color: #777; */
@@ -29,8 +28,8 @@
   color: #007388;
 }
 .marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .featurette-divider {
@@ -40,7 +39,6 @@
 .featurette-heading {
   font-weight: 300;
 }
-
 
 @media (min-width: 40em) {
   .carousel-caption p {
@@ -96,22 +94,22 @@
   margin-bottom: 36px;
 }
 
-.nav-line .active-line img { 
+.nav-line .active-line img {
   opacity: 0;
 }
 
 .dotted-line {
   position: absolute;
-  border-left: 3px dotted #007388;
-  height: 200px;
-  margin-left: 5px;
+  border-left: 1.5px dotted #007388;
+  height: 300px;
+  margin-left: 6px;
 }
 
 .solid-line {
   position: absolute;
-  border-left: 3px solid #9B0F78;
+  border-left: 3px solid #9b0f78;
   margin-left: 5px;
-  transition:0.3s;
+  transition: 0.3s;
 }
 
 .book {
@@ -137,24 +135,24 @@
   height: 60px;
   transform-origin: 0% 50%;
   -webkit-animation: flip 1.2s infinite linear;
-          animation: flip 1.2s infinite linear;
+  animation: flip 1.2s infinite linear;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .book__page:nth-child(1) {
   z-index: -1;
   -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 .book__page:nth-child(2) {
   z-index: -2;
   -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+  animation-delay: 2.8s;
 }
 .book__page:nth-child(3) {
   z-index: -3;
   -webkit-animation-delay: 4.2s;
-          animation-delay: 4.2s;
+  animation-delay: 4.2s;
 }
 
 @-webkit-keyframes flip {
@@ -217,5 +215,16 @@
   }
 }
 
-.content2.items { width: 6200px; position: relative; }
-.item { transition:0.9s; float: left; position: relative; width: 900px; height: 500px; padding: 0 40px; margin-right: 75vh; }
+.content2.items {
+  width: 6200px;
+  position: relative;
+}
+.item {
+  transition: 0.9s;
+  float: left;
+  position: relative;
+  width: 900px;
+  height: 500px;
+  padding: 0 40px;
+  margin-right: 75vh;
+}

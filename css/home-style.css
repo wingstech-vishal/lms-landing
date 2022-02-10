@@ -108,6 +108,8 @@ hr {
   transition: 0.9s;
   width: 400px;
   margin: 21vh auto;
+  /* transform: rotate(0deg); */
+  /* animation: ring-rotate 40s linear infinite; */
 }
 .ele-zoom img.img1-zoom {
   filter: blur(3px);
@@ -427,3 +429,13 @@ hr {
 .star-field .layer:nth-child(3) {
   animation: sf-fly-by-3 5s linear infinite;
 }
+
+/* ring rotate animation  */
+/* @keyframes ring-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
