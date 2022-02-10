@@ -101,14 +101,13 @@ hr {
 .ele-zoom img.img0-zoom {
   /* margin: 20vh auto 0px; */
   display: flex;
-  /* position: fixed; */
+  position: fixed;
   left: -0px;
   right: 0px;
   /* z-index: 1; */
   transition: 0.9s;
   width: 400px;
   margin: 21vh auto;
-  display: flex;
 }
 .ele-zoom img.img1-zoom {
   filter: blur(3px);
@@ -163,6 +162,33 @@ hr {
   object-fit: contain;
   height: 7px;
 }
+
+.ele-zoom img.img5-zoom {
+  filter: blur(3px);
+  margin: 40vh auto 0px;
+  display: flex;
+  position: fixed;
+  left: 0px;
+  right: -300px;
+  z-index: 1;
+  transition: 0.9s;
+  width: 10px;
+  object-fit: contain;
+  height: 8px;
+}
+.ele-zoom img.img6-zoom {
+  filter: blur(3px);
+  margin: 40vh auto 0px;
+  display: flex;
+  position: fixed;
+  left: 0px;
+  right: -300px;
+  z-index: 1;
+  transition: 0.9s;
+  width: 10px;
+  object-fit: contain;
+  height: 8px;
+}
 .content1 {
   margin: 25vh auto 0px;
   position: fixed;
@@ -187,6 +213,42 @@ hr {
   opacity: 0;
 }
 .content3 {
+  width: 70%;
+  margin: 25vh auto 0px;
+  display: flex;
+  position: fixed;
+  left: 50%;
+  right: 0px;
+  z-index: 1;
+  transition: 0.9s;
+  opacity: 0;
+}
+
+.content4 {
+  width: 70%;
+  margin: 25vh auto 0px;
+  display: flex;
+  position: fixed;
+  left: 50%;
+  right: 0px;
+  z-index: 1;
+  transition: 0.9s;
+  opacity: 0;
+}
+
+.content5 {
+  width: 70%;
+  margin: 25vh auto 0px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0px;
+  z-index: 1;
+  transition: 0.9s;
+  opacity: 0;
+}
+
+.content6 {
   width: 70%;
   margin: 25vh auto 0px;
   display: flex;

@@ -24,7 +24,7 @@
 
      
 
-      <div class="container marketing" style="height: 900vh;">
+      <div class="container marketing" style="height: 1800vh;">
         <!-- <div class="bg"></div> -->
         <!-- <div class="star-field"> -->
         <div class="layer"></div>
@@ -40,6 +40,8 @@
                 <img class="img3-zoom" src="./img/img-11.png">
                 <img class="img4-zoom" src="./img/img-22.png">
                 <img class="img0-zoom" src="./img/bg-ring1.png">
+                <img class="img5-zoom" src="./img/img-7.png">
+                <img class="img6-zoom" src="./img/img-8.png">
               </div>
 
             </div>
@@ -81,6 +83,36 @@
           </div>
         </section>
 
+        <section class="content4">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Mentors</h2>
+              <p class="lead">
+                Established in 2021, UTSide is the original, online animation Institute. Our students learn directly from working industry professionals – with more instructors from major studios than any other institute – and get the one on one time they need to prepare for a successful career in the Animation Industry. UTSide students learn using our proprietary online campus, exclusive feedback tools and real-world production pipeline. UTSide has an alumni community of over 5,000 students in over 5 countries, now working in world-class studios like Pixar, DreamWorks, Industrial Light & Magic, Laika, WETA and many more.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content5">
+          <div class="row featurette">
+            <div class="col-md-8">
+              <h2 class="featurette-heading">Resources</h2>
+              <p class="lead">
+                Learn to walk before you run. If you are new to animation, this first course will help you learn the core essence of animation based on the 12 basic principles of animation developed by Disney’s Frank Thomas and Ollie Johnston. You’ll learn animation concepts and techniques to build a solid foundation as you start your animation journey.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content6">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Contact uTside</h2>
+              <p class="lead">
+                Established in 2021, UTSide is the original, online animation Institute. Our students learn directly from working industry professionals – with more instructors from major studios than any other institute – and get the one on one time they need to prepare for a successful career in the Animation Industry. UTSide students learn using our proprietary online campus, exclusive feedback tools and real-world production pipeline. UTSide has an alumni community of over 5,000 students in over 5 countries, now working in world-class studios like Pixar, DreamWorks, Industrial Light & Magic, Laika, WETA and many more.</p>
+            </div>
+          </div>
+        </section>
+
       </div>
 
       <nav id="navbar" class="side-navbar">
@@ -101,7 +133,7 @@
             </a>
           </li>
           <li>
-            <a data-scroll="resources" href="#resources" class="dot">
+            <a data-scroll="resources" href="#resources" class="dot resources">
               <span>Resources</span>
             </a>
           </li>
@@ -161,28 +193,29 @@
           // Section one animation 
 
           if(scroll > 100 && scroll <= 1000){
-            $(".ele-zoom img.img1-zoom").css({
-                  transform: 'translate3d('+(scrollVal*0.5)+'%, -'+(scrollVal*1.5)+'%, 0) scale('+(scrollVal*5)/100+')',
-                  transition : `800ms all ease`,
-                  right: (scroll/10)+'%',
-                  top: (scroll/20)+'%',
-                  filter: 'blur(0px)',
-                  opacity: '1'
-            });
+            
+              $(".ele-zoom img.img1-zoom").css({
+                    transform: 'translate3d('+(scrollVal*0.5)+'%, -'+(scrollVal*1.5)+'%, 0) scale('+(scrollVal*5)/100+')',
+                    transition : `800ms all ease`,
+                    right: (scroll/10)+'%',
+                    top: (scroll/20)+'%',
+                    filter: 'blur(0px)',
+                    opacity: '1'
+              });
 
-            $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur").css({
-                opacity : '1',
-                transition : `800ms all ease`,
+              $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur").css({
+                  opacity : '1',
+                  transition : `800ms all ease`,
               })
 
-            $(".ele-zoom img.img2-zoom").css({
-                  transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*2)/100+')',
-                  transition : `800ms all ease`,
-                  left: (scroll/10)+'%',
-                  top: (scroll/20)+'%',
-                  filter: 'blur(0px)',
-                  opacity: '1'
-            });
+              $(".ele-zoom img.img2-zoom").css({
+                    transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*2)/100+')',
+                    transition : `800ms all ease`,
+                    left: (scroll/10)+'%',
+                    top: (scroll/20)+'%',
+                    filter: 'blur(0px)',
+                    opacity: '1'
+              });
               $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur").css({
                 opacity : '1',
                 transition : `800ms all ease`,
@@ -236,7 +269,7 @@
 
           // Section three animation 
 
-          if (scroll > 3050 && scroll <= 6000 ) {
+        if (scroll > 3050 && scroll <= 6000 ) {
             $(".content3").css({opacity: '1'});
             $(".ele-zoom img.img4-zoom").css({
                 transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*1.5)/100+')',
@@ -249,7 +282,7 @@
             $("a.dot.courses").addClass('active');
             $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
             $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
-          }else {
+        }else {
             $(".ele-zoom img.img4-zoom").css({
               opacity: '0',
               filter: 'blur(3px)',
@@ -259,6 +292,54 @@
             $("a.dot.courses").removeClass('active');
           }
         }
+
+        if (scroll > 6050 && scroll <= 9000 ) {
+            $(".content4").css({opacity: '1'});
+            $(".ele-zoom img.img5-zoom").css({
+                transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*0.5)/100+')',
+                transition : `800ms all ease`,
+                left: ('-'+scroll*0.3/100)+'%',
+                top: (scroll/200)+'%',
+                filter: 'blur(0px)',
+                opacity: '1'
+            });
+            $("a.dot.mentor").addClass('active');
+            $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+            $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        }else {
+            $(".ele-zoom img.img5-zoom").css({
+              opacity: '0',
+              filter: 'blur(3px)',
+              transition : '800ms all ease'
+            });
+            $(".content4").css({ 'opacity' : '0' });
+            $("a.dot.mentor").removeClass('active');
+        }
+
+
+        if (scroll > 9050 && scroll <= 12000 ) {
+            $(".content5").css({opacity: '1'});
+            $(".ele-zoom img.img6-zoom").css({
+                transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*0.5)/100+')',
+                transition : `800ms all ease`,
+                left: (''+scroll*0.8/100)+'%',
+                top: (scroll/150)+'%',
+                filter: 'blur(0px)',
+                opacity: '1'
+            });
+            $("a.dot.resources").addClass('active');
+            $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+            $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+        }else {
+            $(".ele-zoom img.img6-zoom").css({
+              opacity: '0',
+              filter: 'blur(3px)',
+              transition : '800ms all ease'
+            });
+            $(".content5").css({ 'opacity' : '0' });
+            $("a.dot.resources").removeClass('active');
+        }
+        
 
 
       });
