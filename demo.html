@@ -9,7 +9,7 @@
 
     <title>UTSide Marketing</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/"> -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/carousel.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/galaxy.css" />
@@ -25,7 +25,7 @@
      
 
       <div class="container marketing" style="height: 1800vh;">
-        <!-- <div class="bg"></div> -->
+        <div class="bg"></div>
         <!-- <div class="star-field"> -->
         <div class="layer"></div>
         <div class="layer"></div>
@@ -296,9 +296,9 @@
         if (scroll > 6050 && scroll <= 9000 ) {
             $(".content4").css({opacity: '1'});
             $(".ele-zoom img.img5-zoom").css({
-                transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*0.5)/100+')',
+                transform: 'translate3d(-'+(scroll*0.3)+'%, -'+(scroll*0.3)+'%, 0) scale('+(scroll*1.2)/100+')',
                 transition : `800ms all ease`,
-                left: ('-'+scroll*0.3/100)+'%',
+                left: ('-'+scroll*0.4/100)+'%',
                 top: (scroll/200)+'%',
                 filter: 'blur(0px)',
                 opacity: '1'
@@ -322,7 +322,7 @@
             $(".ele-zoom img.img6-zoom").css({
                 transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*0.5)/100+')',
                 transition : `800ms all ease`,
-                left: (''+scroll*0.8/100)+'%',
+                left: (''+scroll*0.9/100)+'%',
                 top: (scroll/150)+'%',
                 filter: 'blur(0px)',
                 opacity: '1'
