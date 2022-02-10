@@ -25,8 +25,8 @@
      
 
       <div class="container marketing" style="height: 900vh;">
-        <div class="bg"></div>
-        <div class="star-field">
+        <!-- <div class="bg"></div> -->
+        <!-- <div class="star-field"> -->
         <div class="layer"></div>
         <div class="layer"></div>
         <div class="layer"></div>
@@ -39,7 +39,7 @@
                 <img class="img2-zoom" src="./img/img-55.png">
                 <img class="img3-zoom" src="./img/img-11.png">
                 <img class="img4-zoom" src="./img/img-22.png">
-                <img class="img0-zoom" src="./img/img-0.webp">
+                <img class="img0-zoom" src="./img/bg-ring1.png">
               </div>
 
             </div>
@@ -140,228 +140,126 @@
     
 <script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="./js/jquery.parallaxify.min.js" type="text/javascript"></script>
-		<script type="text/javascript">
-		$(function(){
-			$(document).ready(function() {
-				var i,
-					size,
-					color,
-					width = $(window).width(),
-					height = $(window).height();
-				
-				for (i = 1; i <= 150; i++) {
-					size = Math.ceil(3*Math.random());
-					$('#background').append('<div class="star" data-parallaxify-range="' + Math.round(100*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
-				}
-				
-				for (i = 1; i <= 30; i++) {
-					size = Math.ceil(5*Math.random()) + 1;
-					$('#background').append('<div class="star" data-parallaxify-range="' + Math.round(400*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
-				}
-				
-				for (i = 1; i <= 15; i++) {
-					size = Math.ceil(5*Math.random()) + 2;
-					color = '#666666';
-					$('#background').append('<div class="star" data-parallaxify-range="' + Math.round(600*Math.random()) + '" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px; background: ' + color + '; box-shadow: 0px 0px 10px ' + color + ';"></div>');
-				}
-				
-				$.parallaxify({
-					positionProperty: 'transform',
-					responsive: true,
-					motionType: 'natural',
-					mouseMotionType: 'gaussian',
-					motionAngleX: 80,
-					motionAngleY: 80,
-					alphaFilter: 0.5,
-					adjustBasePosition: true,
-					alphaPosition: 0.025,
-				});
-
-				$('#foreground').click(function() {
-					$('#info').animate({ marginLeft: "-150px" }, 700);
-				});
-			});
-		});
-
-		</script>
+	
     <script>
-      $( window ).on( "scroll", function(e) {
-        e.preventDefault();
+      $(window).scroll(function(){
+
         var scroll = $(window).scrollTop();
+        let scrollVal = scroll;
+        setTimeout(ringEffect(),300);
+        setTimeout(animationEffect(scroll),100);
+
+        function ringEffect(){
+
           $(".ele-zoom img.img0-zoom").css({
-              transform: 'scale('+(scroll*0.01)+')',
+              transform: 'scale('+((scroll+1000)/10*0.01)+')',
               transition : `800ms all ease`,
-        });
-        // Section one animation 
-        if(scroll > 100 && scroll <= 1000){
-          $(".ele-zoom img.img1-zoom").css({
-                transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*5)/100+')',
-                transition : `800ms all ease`,
-                right: (scroll/10)+'%',
-                top: (scroll/20)+'%',
-                filter: 'blur(0px)',
-                opacity: '1'
           });
-          $(".ele-zoom img.img2-zoom").css({
-                transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*2)/100+')',
-                transition : `800ms all ease`,
-                left: (scroll/10)+'%',
-                top: (scroll/20)+'%',
-                filter: 'blur(0px)',
-                opacity: '1'
-          });
+        }
 
-          if(scroll > 200 && scroll <= 1000){
+        function animationEffect(scroll){
+          // Section one animation 
+
+          if(scroll > 100 && scroll <= 1000){
+            $(".ele-zoom img.img1-zoom").css({
+                  transform: 'translate3d('+(scrollVal*0.5)+'%, -'+(scrollVal*1.5)+'%, 0) scale('+(scrollVal*5)/100+')',
+                  transition : `800ms all ease`,
+                  right: (scroll/10)+'%',
+                  top: (scroll/20)+'%',
+                  filter: 'blur(0px)',
+                  opacity: '1'
+            });
+
             $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur").css({
-              opacity : '1',
-              transition : `800ms all ease`,
-            })
-          }if(scroll > 600 && scroll <= 900){
+                opacity : '1',
+                transition : `800ms all ease`,
+              })
 
-            $(".text-1-solid, .text-2-solid, .text-3-solid, .text-4-solid").css({
-              opacity : '1',
-              transition : `1000ms all ease`,
-            })
+            $(".ele-zoom img.img2-zoom").css({
+                  transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*2)/100+')',
+                  transition : `800ms all ease`,
+                  left: (scroll/10)+'%',
+                  top: (scroll/20)+'%',
+                  filter: 'blur(0px)',
+                  opacity: '1'
+            });
+              $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur").css({
+                opacity : '1',
+                transition : `800ms all ease`,
+              })
+              $(".text-1-solid, .text-2-solid, .text-3-solid, .text-4-solid").css({
+                opacity : '1',
+                transition : `1000ms all ease`,
+              })
 
           }else{
             $(".text-1-blur, .text-2-blur, .text-3-blur, .text-4-blur, .text-1-solid, .text-2-solid, .text-3-solid, .text-4-solid").css({
               opacity : '0',
               transition : `800ms all ease`,
             })
+            $(".ele-zoom img.img1-zoom").css({
+              opacity: '0',
+              filter: 'blur(3px)',
+              transition : '800ms all ease'
+            });
+            $(".ele-zoom img.img2-zoom").css({
+              opacity: '0',
+              filter: 'blur(3px)',
+              transition : '800ms all ease'
+            });
           }
 
+          // Section two animation 
 
+          if (scroll > 1050 && scroll <= 3000 ) {
+            $(".content2").css({opacity: '1'});
+            $(".ele-zoom img.img3-zoom").css({
+                transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*2.5)/100+')',
+                transition : `800ms all ease`,
+                left: (scroll/100)+'%',
+                top: (scroll/200)+'%',
+                filter: 'blur(0px)',
+                opacity: '1'
+            });
+            $("a.dot.about").addClass('active');
+            $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+            $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+          }else {
+            $(".ele-zoom img.img3-zoom").css({
+              opacity: '0',
+              filter: 'blur(3px)',
+              transition : '800ms all ease'
+            });
+            $(".content2").css({ 'opacity' : '0' });
+            $("a.dot.about").removeClass('active');
+          }
 
-        }else{
-          $(".ele-zoom img.img1-zoom").css({
-            opacity: '0',
-            filter: 'blur(3px)',
-            transition : '800ms all ease'
-          });
-          $(".ele-zoom img.img2-zoom").css({
-            opacity: '0',
-            filter: 'blur(3px)',
-            transition : '800ms all ease'
-          });
+          // Section three animation 
+
+          if (scroll > 3050 && scroll <= 6000 ) {
+            $(".content3").css({opacity: '1'});
+            $(".ele-zoom img.img4-zoom").css({
+                transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*1.5)/100+')',
+                transition : `800ms all ease`,
+                left: ('-'+scroll*0.5/100)+'%',
+                top: (scroll/200)+'%',
+                filter: 'blur(0px)',
+                opacity: '1'
+            });
+            $("a.dot.courses").addClass('active');
+            $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
+            $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
+          }else {
+            $(".ele-zoom img.img4-zoom").css({
+              opacity: '0',
+              filter: 'blur(3px)',
+              transition : '800ms all ease'
+            });
+            $(".content3").css({ 'opacity' : '0' });
+            $("a.dot.courses").removeClass('active');
+          }
         }
 
-        // Section two animation 
-
-        if (scroll > 1100 && scroll <= 3000 ) {
-          $(".content2").css({
-            opacity: '1'
-          });
-          $(".ele-zoom img.img3-zoom").css({
-              transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*2.5)/100+')',
-              transition : `800ms all ease`,
-              left: (scroll/100)+'%',
-              top: (scroll/200)+'%',
-              filter: 'blur(0px)',
-              opacity: '1'
-        });
-          $("a.dot.about").addClass('active');
-          $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
-          $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
-        }else {
-          $(".ele-zoom img.img3-zoom").css({
-            opacity: '0',
-            filter: 'blur(3px)',
-            transition : '800ms all ease'
-          });
-          $(".content2").css({ 'opacity' : '0' });
-          $("a.dot.about").removeClass('active');
-        }
-
-        // Section three animation 
-
-        if (scroll > 3100 && scroll <= 6000 ) {
-          $(".content3").css({opacity: '1'});
-          $(".ele-zoom img.img4-zoom").css({
-              transform: 'translate3d(-'+(scroll*0.5)+'%, -'+(scroll*0.5)+'%, 0) scale('+(scroll*1.5)/100+')',
-              transition : `800ms all ease`,
-              left: ('-'+scroll*0.5/100)+'%',
-              top: (scroll/200)+'%',
-              filter: 'blur(0px)',
-              opacity: '1'
-        });
-          $("a.dot.courses").addClass('active');
-          $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
-          $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
-        }else {
-          $(".ele-zoom img.img4-zoom").css({
-            opacity: '0',
-            filter: 'blur(3px)',
-            transition : '800ms all ease'
-          });
-          $(".content3").css({ 'opacity' : '0' });
-          $("a.dot.courses").removeClass('active');
-        }
-      });
-
-      $(window).scroll(function(){
-
-      //   var totalHeigth = ($( window ).height());
-      //   // Background Rings Trasistion
-      //   console.log("Scroll : ",scroll);
-      //   console.log("totalHeigth : ",totalHeigth);
-
-       
-      //   $(".ele-zoom img.img0-zoom").css({
-      //         transform: 'translate3d(0%, 0%, 0) scale('+(scroll/100)+')',
-      //         transition : `800ms all ease`,
-      //   });
-      //   // Upcoming Blur Images Transition
-      //   $(".ele-zoom img.img1-zoom").css({ 'right': +(scroll/10)+'%' });
-      //   $(".ele-zoom img.img1-zoom").css({ 'top': +(scroll/20)+'%' });
-      //   if(scroll > 100 && scroll <= 1000){
-      //     $(".ele-zoom img.img1-zoom").css({ 'opacity' : '1' });
-      //     $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(0px)` });
-      //     $(".ele-zoom img.img1-zoom").css({
-      //           transform: 'translate3d('+(scroll*0.5)+'%, -'+(scroll*1.5)+'%, 0) scale('+(scroll*5)/100+')',
-      //           transition : `800ms all ease`,
-      //     });
-
-          
-      
-      // }else{
-        
-      //   $(".ele-zoom img.img1-zoom").css({ 'opacity' : '0' });
-      //   $(".ele-zoom img.img1-zoom").css({ 'filter' : `blur(3px)` });  
-      //   $(".ele-zoom img.img1-zoom").css({ 'transition' : `800ms all ease` });
-        
-
-      // }
-
-
-
-
-      
-
-      // if (scroll > ((totalHeigth)*(2/3)) ) {
-
-      //   console.log("Contact::", totalHeigth);
-      //   $(".content3").css({ 'opacity' : '1' });
-      //   $(".content3").css({ 'margin-top' : '17vh' });
-      //   $("a.dot.courses").addClass('active');
-      //   $(".inactive-line img:nth-child(1)").css({ 'opacity' : '0' });
-      //   $(".active-line img:nth-child(1)").css({ 'opacity' : '1' });
-      // }
-      // else {
-      //   $(".content3").css({ 'opacity' : '0' });
-      //   $(".content3").css({ 'margin-top' : '50vh' });
-      //   $("a.dot.courses").removeClass('active');
-      // }
-
-        // if(scroll > (totalHeigth)/4 && scroll <= (totalHeigth)/2){
-        //     $(".ele-zoom img.img2-zoom").css({ 'opacity' : '1' });
-        //     $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(0px)` });
-
-            
-
-        // }else{
-        //     $(".ele-zoom img.img2-zoom").css({ 'opacity' : '0' });
-        //     $(".ele-zoom img.img2-zoom").css({ 'filter' : `blur(3px)` });
-        // }
 
       });
 
