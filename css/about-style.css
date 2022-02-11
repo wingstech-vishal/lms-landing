@@ -411,8 +411,8 @@ hr {
 .partners-img-block {
   display: flex;
   align-items: center;
-  gap: 0 10px;
-  justify-content: center;
+  gap: 0 15px;
+  justify-content: flex-start;
 }
 .partners-img-block > div:first-child
 {
@@ -421,7 +421,9 @@ hr {
     display: flex;
     align-items: center;
 }
-
+.partners-img-block > div {
+  box-shadow: 3px 3px 5px 1px #00000045;
+}
 .p-0 {
   padding: 0;
 }
